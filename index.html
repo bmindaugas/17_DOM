@@ -5,31 +5,35 @@
     <meta charset="UTF-8">
 
     <title>Kvadratas</title>
-<style>
-#a {
-    background-color: red;
-    width: 200px;
-    height: 200px;
-    
-}
-@keyframes a {
-    /* from {margin-left: -30%;} */
-    from { background-color: red; }
-    to { background-color: green; border-radius: 50%;}
-}
-</style>
+    <style>
+        #a {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        @keyframes a {
+
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: green;
+                border-radius: 50%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="a" onclick="pasikeitimas()">Start</div>
-    <!-- <div id="a">Hello</div> -->
-<!-- <div id="b">labas pasauli</div>
-<button onclick="pasikeitimas()">Click me</button> -->
+    <div id="a" onclick="pasikeitimas()"></div>
 
-<script>
-    function pasikeitimas() {
-        document.getElementById("a").style.animation = "a 1s"
-    }
+
+    <script>
+        function pasikeitimas() {
+            document.getElementById("a").style.animation = "a 5s forwards"
+        }
+
     </script>
 </body>
 

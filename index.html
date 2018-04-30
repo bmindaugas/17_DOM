@@ -37,16 +37,22 @@
 </head>
 
 <body>
-    <div id="a" onclick="pasikeitimas1(this)" ondblclick="pasikeitimas2(this)"></div>
+    <div id="a" onclick="pasikeitimas1(this)" ></div>
 
     <script>
 
         function pasikeitimas1(obj) {
-            document.getElementById("a").style.animation = "a 1s forwards"
-        }
-        function pasikeitimas2(obj) {
-            document.getElementById("a").style.animation = "b 1s forwards"
-        }
+         var element = document.getElementById("a");
+
+         if (element.classList.contains('animated')) {
+           element.style.animation = "b 1s forwards";
+           element.classList.remove('animated');
+         } else {
+           element.style.animation = "a 1s forwards";
+           element.classList.add('animated');
+         }
+       }
+        
 
     </script>
 </body>

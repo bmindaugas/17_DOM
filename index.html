@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Kvadratas</title>
+    <title>Kvadratas band</title>
     <style>
         #a {
             background-color: red;
@@ -22,16 +22,30 @@
                 border-radius: 50%;
             }
         }
+
+        @keyframes b {
+
+            from {
+                background-color: green;
+                border-radius: 50%;
+            }
+            to {
+                background-color: red;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="a" onclick="pasikeitimas()"></div>
-
+    <div id="a" onclick="pasikeitimas1(this)" ondblclick="pasikeitimas2(this)"></div>
 
     <script>
-        function pasikeitimas() {
+
+        function pasikeitimas1(obj) {
             document.getElementById("a").style.animation = "a 1s forwards"
+        }
+        function pasikeitimas2(obj) {
+            document.getElementById("a").style.animation = "b 1s forwards"
         }
 
     </script>
